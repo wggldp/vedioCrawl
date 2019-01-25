@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.admin</groupId>
-    <artifactId>crawl</artifactId>
+    <artifactId>vedioCrawl</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>crawl</name>
+    <name>vedioCrawl</name>
     <description>爬虫</description>
 
     <properties>
