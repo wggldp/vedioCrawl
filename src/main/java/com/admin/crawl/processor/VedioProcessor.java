@@ -1,7 +1,10 @@
 package com.admin.crawl.processor;
 
+import com.admin.crawl.pipeline.VedioPipeline;
+import lombok.extern.slf4j.Slf4j;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
+import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.processor.PageProcessor;
 import us.codecraft.webmagic.selector.Selectable;
 
@@ -11,6 +14,7 @@ import java.util.List;
  * @author: wugang
  * @version: 1.0
  */
+@Slf4j
 public class VedioProcessor implements PageProcessor {
     private Site site = Site.me().setDomain("jianshu.com")
             .setSleepTime(100)
@@ -20,15 +24,14 @@ public class VedioProcessor implements PageProcessor {
     @Override
     public void process(Page page) {
         //TODO 待实现逻辑
+        log.info("test2");
+        if (page.getUrl() != null) {
+
+        }
     }
 
     @Override
     public Site getSite() {
         return site;
-    }
-
-
-    public static void main(String[] args) {
-
     }
 }

@@ -14,16 +14,16 @@ import us.codecraft.webmagic.Spider;
  * @version: 1.0
  */
 @Component
-@RequiredArgsConstructor(onConstructor_ = @Autowired)
 public class VedioScheduled {
 
-    private final VedioPipeline vedioPipeline;
+    @Autowired
+    private  VedioPipeline vedioPipeline;
 
-    @Scheduled(cron = "0 0 0/2 * * ? ")//从0点开始,每2个小时执行一次
+    @Scheduled(cron = "0 0 0/1 * * ? ")//从0点开始,每2个小时执行一次
     public void vedioScheduled() {
         System.out.println("----开始执行简书定时任务");
         Spider spider = Spider.create(new VedioProcessor());
-        spider.addUrl("http://www.jianshu.com");
+        spider.addUrl("https://www.jianshu.com");
         spider.addPipeline(vedioPipeline);
         spider.thread(5);
         spider.setExitWhenComplete(true);
