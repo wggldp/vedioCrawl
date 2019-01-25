@@ -20,7 +20,7 @@ public class VedioScheduled {
     private final VedioPipeline vedioPipeline;
 
     @Scheduled(cron = "0 0 0/2 * * ? ")//从0点开始,每2个小时执行一次
-    public void jianShuScheduled() {
+    public void vedioScheduled() {
         System.out.println("----开始执行简书定时任务");
         Spider spider = Spider.create(new VedioProcessor());
         spider.addUrl("http://www.jianshu.com");
