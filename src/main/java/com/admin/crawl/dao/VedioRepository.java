@@ -12,9 +12,11 @@ import java.util.List;
 @Repository
 public interface VedioRepository {
 
-    VedioBean findOne(VedioBean vedioBean);
+    VedioBean queryByName(String name);
 
     int insertBatch(List<VedioBean> vb);
 
     int insert(VedioBean vb);
+
+    List<VedioBean> queryAllPage();
 }
