@@ -9,7 +9,7 @@
     <!-- app -->
     <appender name="file"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${path}/${appname}_${ip}_${port}.log</File>
+        <File>${path}/${appname}_${port}.log</File>
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} [%-5level] [%-5thread] %logger{20}
                 -%msg%n</pattern>
@@ -20,14 +20,14 @@
         <append>true</append>
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${path}/${appname}_${ip}_${port}.%d{yyyy-MM-dd}.log
+            <fileNamePattern>${path}/${appname}_${port}.%d{yyyy-MM-dd}.log
             </fileNamePattern>
         </rollingPolicy>
     </appender>
     <!-- jdbc -->
     <appender name="jdbcfile"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${path}/${appname}_${ip}_${port}_jdbc.log
+        <File>${path}/${appname}_${port}_jdbc.log
         </File>
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} [%-5level] [%-5thread] %logger{20} -
@@ -39,7 +39,7 @@
         <append>true</append>
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${path}/${appname}_${ip}_${port}_jdbc.%d{yyyy-MM-dd}(%i).log
+            <fileNamePattern>${path}/${appname}_${port}_jdbc.%d{yyyy-MM-dd}(%i).log
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">

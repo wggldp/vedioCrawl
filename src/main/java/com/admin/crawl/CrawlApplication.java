@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-@MapperScan({"com.admin.crawl.repository"})
+@MapperScan({"com.admin.crawl.dao"})
 public class CrawlApplication {
 
     public static void main(String[] args) {
