@@ -13,7 +13,7 @@ public class SeedScheduled {
     @Autowired
     private SeedPipeline seedPipeline;
 
-    @Scheduled(cron = "* * /20 * * * ? ")//从0点开始,每2个小时执行一次
+    @Scheduled(cron = "*/10 * * * * ? ")//从0点开始,每2个小时执行一次
     public void seedScheduled() {
         Spider spider = Spider.create(new SeedProcessor());
         spider.addUrl("http://www.bteat.com/search/刘涛-first-asc-1");

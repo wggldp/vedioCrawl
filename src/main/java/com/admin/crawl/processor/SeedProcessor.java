@@ -31,7 +31,7 @@ public class SeedProcessor implements PageProcessor {
         }else{
             Html html = page.getHtml();
             String title =  html.xpath("//*[@id=\"wall\"]/h1/text()").get();
-            String desc =  html.xpath("//*[@id=\"wall\"]/div[@class='fileDetail']/p[1]/text()").get();
+            String desc =  html.xpath("//*[@id=\"wall\"]/div[@class='fileDetail']/p[1]/a/text()").get();
             String size =  html.xpath("//*[@id=\"wall\"]/div[@class='fileDetail']/p[2]/text()").get();////*[@id="wall"]/div[1]/p[2]
             String getDate =  html.xpath("//*[@id=\"wall\"]/div[@class='fileDetail']/p[3]/text()").get();//收录时间
             String lastDate =  html.xpath("//*[@id=\"wall\"]/div[@class='fileDetail']/p[4]/text()").get(); //最后活跃时间
