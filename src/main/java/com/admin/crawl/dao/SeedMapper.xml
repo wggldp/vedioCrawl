@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.admin.crawl.dao.SeedMapper">
+    <resultMap id="BaseMap" type="com.admin.crawl.bean.SeedVO">
+        <result column="seed_id" property="seed_id"/>
+        <result column="seed_title" property="seed_title"/>
+        <result column="seed_desc" property="seed_desc"/>
+        <result column="seed_hot" property="seed_hot"/>
+        <result column="seed_size" property="seed_size"/>
+        <result column="seed_link" property="seed_link"/>
+        <result column="seed_create_time" property="seed_create_time"/>
+    </resultMap>
+    <insert id="insert">
+      insert into t_seed (seed_title,seed_desc,seed_hot,seed_size,seed_link )
+      values (
+        #{seed_title},#{seed_desc},#{seed_hot},#{seed_size},#{seed_link}
+      )
+    </insert>
+    <insert id="insertBatch">
+
+    </insert>
+
+    <select id="queryByName" parameterType="java.lang.String">
+      select * from t_seed
+      where
+      seed_title = #{name}
+    </select>
+
+</mapper>
