@@ -14,9 +14,13 @@ public interface VedioRepository {
 
     VedioBean queryByName(String name);
 
-    int insertBatch(List<VedioBean> vb);
+    int chechKey(String key);
+
+    int insertBatch(String key);
 
     int insert(VedioBean vb);
 
     List<VedioBean> queryAllPage();
+
+    List<String> getAllKeys();
 }

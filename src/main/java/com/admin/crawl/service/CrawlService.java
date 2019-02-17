@@ -7,4 +7,6 @@ import java.util.List;
 public interface CrawlService {
     VedioBean queryByName(String name);
     List<VedioBean> queryAllPage();
+
+    List<String> queryAllKey();
 }

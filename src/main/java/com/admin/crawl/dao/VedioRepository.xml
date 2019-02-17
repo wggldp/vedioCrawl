@@ -15,8 +15,13 @@
       )
 
     </insert>
-    <insert id="insertBatch">
 
+
+    <insert id="insertBatch">
+      insert into t_key (id,key)
+      values (
+        #{key}
+      )
     </insert>
 
     <select id="queryByName" parameterType="java.lang.String">
@@ -27,5 +32,13 @@
 
     <select id="queryAllPage" resultMap="BaseMap">
         select * from t_vedio
+    </select>
+
+    <select id="chechKey" parameterType="java.lang.String">
+        select 1 from t_key where key =#{key}
+    </select>
+
+    <select id="getAllKeys" resultType="java.util.List">
+        select key from t_key
     </select>
 </mapper>
